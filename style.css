@@ -72,8 +72,14 @@ body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180de
   font-size: 1.2rem;
   opacity: 0;
   pointer-events: none;
+  transform: scale(0);
   transition: opacity 0.3s ease, transform 0.2s;
   z-index: 100;
+}
+
+#back-to-top.show {
+  transform: scale(1);
+  opacity: 1;
 }
 
 #back-to-top:hover {

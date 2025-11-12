@@ -188,9 +188,7 @@
 
   <script src="script.js"></script>
 <script>
-    lucide.replace()
-
-    // Smooth scroll for Back to Top
+        // Smooth scroll for Back to Top
     const backToTop = document.getElementById('back-to-top');
     backToTop.addEventListener('click', function(e) {
       e.preventDefault();
@@ -200,13 +198,12 @@
     // Show/hide back-to-top arrow on scroll
     window.addEventListener('scroll', () => {
       if(window.scrollY > 300){
-        backToTop.style.opacity = 1;
-        backToTop.style.pointerEvents = 'auto';
+        backToTop.classList.add('show');
       } else {
-        backToTop.style.opacity = 0;
-        backToTop.style.pointerEvents = 'none';
+        backToTop.classList.remove('show');
       }
     });
+
   </script>
 </body>
 </html>

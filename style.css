@@ -73,19 +73,21 @@ body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180de
   opacity: 0;
   pointer-events: none;
   transform: scale(0);
-  transition: opacity 0.3s ease, transform 0.2s;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 100;
 }
 
 #back-to-top.show {
-  transform: scale(1);
   opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
 }
 
 #back-to-top:hover {
-  transform: translateY(-3px);
+  transform: scale(1.1);
   background: #5aa6ff;
 }
+
 
 
 .footer-inner{display:flex;justify-content:space-between;align-items:center}

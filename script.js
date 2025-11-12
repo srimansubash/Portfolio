@@ -21,23 +21,38 @@ function handleContactSubmit(e){
 
 // Dark/Light theme toggle
 const themeBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
 let dark = true;
+
 themeBtn.addEventListener('click', () => {
   dark = !dark;
-  if(!dark){
-    document.documentElement.style.setProperty('--bg','#f6f8fb');
-    document.documentElement.style.setProperty('--card','#ffffff');
-    document.documentElement.style.setProperty('--muted','#445566');
-    document.documentElement.style.setProperty('color-scheme','light');
+
+  if (!dark) {
+    // Light Mode
+    document.documentElement.style.setProperty('--bg', '#f6f8fb');
+    document.documentElement.style.setProperty('--card', '#ffffff');
+    document.documentElement.style.setProperty('--muted', '#445566');
+    document.documentElement.style.setProperty('--accent', '#7c5cff');
+    document.documentElement.style.setProperty('color-scheme', 'light');
     document.body.style.color = '#0b1720';
+
+    // Change icon to moon (dark mode icon)
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
   } else {
-    document.documentElement.style.setProperty('--bg','#0f1724');
-    document.documentElement.style.setProperty('--card','#0b1220');
-    document.documentElement.style.setProperty('--muted','#9aa4b2');
-    document.documentElement.style.setProperty('color-scheme','dark');
+    // Dark Mode
+    document.documentElement.style.setProperty('--bg', '#0f1724');
+    document.documentElement.style.setProperty('--card', '#0b1220');
+    document.documentElement.style.setProperty('--muted', '#9aa4b2');
+    document.documentElement.style.setProperty('color-scheme', 'dark');
     document.body.style.color = '#e6eef8';
+
+    // Change icon to sun (light mode icon)
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
   }
 });
+
 
 // Back-to-top button
 const backToTop = document.getElementById('back-to-top');

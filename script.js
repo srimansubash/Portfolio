@@ -74,3 +74,14 @@ const navMenu = document.getElementById('nav-menu');
 hamburger.addEventListener('click', ()=>{
   navMenu.classList.toggle('show');
 });
+
+// Make project images clickable to open Live Demo
+document.querySelectorAll('.project-img').forEach(img => {
+  img.style.cursor = 'pointer'; // show pointer on hover
+  img.addEventListener('click', () => {
+    const liveLink = img.getAttribute('data-live');
+    if(liveLink) {
+      window.open(liveLink, '_blank'); // open in new tab
+    }
+  });
+});

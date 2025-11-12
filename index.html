@@ -12,7 +12,7 @@
   <!-- Lucide & Font Awesome -->
   <script src="https://unpkg.com/lucide@0.265.0/dist/lucide.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -134,33 +134,57 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-grid">
-        <div class="card contact-card">
-          <h4>Get in touch</h4>
-          <p>Email: <a href="mailto:srimansubash.p@gmail.com">srimansubash.p@gmail.com</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/srimansubash" target="_blank">/in/srimansubash</a></p>
-          <p>GitHub: <a href="https://github.com/srimansubash" target="_blank">@srimansubash</a></p>
+ <!-- Contact Section -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">
+      Have a question or want to collaborate? I'd love to hear from you!
+    </p>
+
+    <div class="contact-grid">
+      <!-- Contact Info Card -->
+      <div class="card contact-card">
+        <h4>Connect with Me</h4>
+        <div class="social-links">
+          <a href="mailto:srimansubash.p@gmail.com" class="social-icon email" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://www.linkedin.com/in/srimansubash" class="social-icon linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/srimansubash" class="social-icon github" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
         </div>
-        <form id="contact-form" class="card contact-form" action="#" onsubmit="return handleContactSubmit(event)">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <div class="form-row">
-            <button class="btn" type="submit">Send</button>
-            <button class="btn ghost" type="reset">Reset</button>
-          </div>
-          <p id="form-msg" class="muted small" aria-live="polite"></p>
-        </form>
       </div>
+
+      <!-- Contact Form -->
+      <form id="contact-form" class="card contact-form" onsubmit="return handleContactSubmit(event)">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your Email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <div class="form-row">
+          <button class="btn" type="submit">Send</button>
+          <button class="btn ghost" type="reset">Reset</button>
+        </div>
+
+        <p id="form-msg" class="muted small" aria-live="polite"></p>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
+
 </main>
 
 <footer class="site-footer">

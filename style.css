@@ -71,6 +71,13 @@ a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(124,92,25
   transform: translateY(-2px);
 }
 
+.name {
+  border-right: 2px solid #7c5cff; /* cursor effect */
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 /* ================= CONTACT SECTION ================= */
 .contact-section {
   padding: 4rem 1rem;

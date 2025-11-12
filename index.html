@@ -199,5 +199,51 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+const nameElement = document.querySelector('.name');
+
+// Array of names/titles to cycle through
+const names = ['sriman subash', 'Java Backend Developer', 'Full Stack Developer'];
+
+let index = 0; // current name index
+let charIndex = 0; // current character index
+let typingSpeed = 150; // ms per character
+let pauseTime = 1500; // pause after full name
+
+function type() {
+  const currentName = names[index];
+  
+  // Add one character at a time
+  nameElement.textContent = currentName.slice(0, charIndex + 1);
+  charIndex++;
+
+  if (charIndex < currentName.length) {
+    setTimeout(type, typingSpeed);
+  } else {
+    // After typing full name, wait and then delete
+    setTimeout(erase, pauseTime);
+  }
+}
+
+function erase() {
+  const currentName = names[index];
+
+  // Remove one character at a time
+  nameElement.textContent = currentName.slice(0, charIndex - 1);
+  charIndex--;
+
+  if (charIndex > 0) {
+    setTimeout(erase, typingSpeed / 2);
+  } else {
+    // Move to next name
+    index = (index + 1) % names.length;
+    setTimeout(type, 500);
+  }
+}
+
+// Start typing
+type();
+</script>
+
 </body>
 </html>

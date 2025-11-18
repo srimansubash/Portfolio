@@ -62,58 +62,44 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills" class="section skills-section">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="grid skills-grid"> 
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
 
-  <!-- Frontend -->
-  <div class="card skill-card">
-    <h4>Frontend</h4>
-    <ul>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="24" alt="HTML"> HTML</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="24" alt="CSS"> CSS</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="24" alt="JS"> JavaScript</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="24" alt="React"> React</li>
-      <li><img src="projects/icons/tailwindcss.png" width="24" alt="Tailwind"> Tailwind CSS</li>
-      <li><img src="projects/icons/bootstrap.png" width="24" alt="Bootstrap"> Bootstrap</li>
-    </ul>
+    <div class="skills-carousel">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="skill-row">
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill"><img src="projects/icons/bootstrap.png" alt="Bootstrap"><span>Bootstrap</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"><span>Git</span></div>       </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="skill-row">
+          <div class="skill"><img src="projects/icons/tailwindcss.png" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express.js"><span>Express.js</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React"><span>React</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+          <div class="skill"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code"><span>VS Code</span></div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- Backend -->
-  <div class="card skill-card">
-    <h4>Backend</h4>
-    <ul>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="24" alt="Node.js"> Node.js</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" width="24" alt="Express.js"> Express.js</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="24" alt="Java"> Java</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" width="24" alt="PHP"> PHP</li>
-    </ul>
-  </div>
-
-  <!-- Databases -->
-  <div class="card skill-card">
-    <h4>Databases</h4>
-    <ul>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" width="24" alt="MongoDB"> MongoDB</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="24" alt="MySQL"> MySQL</li>
-    </ul>
-  </div>
-
-  <!-- Tools -->
-  <div class="card skill-card">
-    <h4>Tools</h4>
-    <ul>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="24" alt="Git"> Git</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="24" alt="GitHub"> GitHub</li>
-      <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="24" alt="VS Code"> VS Code</li>
-    </ul>
-  </div>
-
-</div>
-
-  </section>
 
   <!-- Projects Section -->
   <section id="projects" class="section projects-section">
@@ -279,6 +265,27 @@ function erase() {
 // Start typing
 type();
 </script>
+<script>
+const slides = document.querySelectorAll('.skills-carousel .slide');
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+// Initial slide
+showSlide(currentSlide);
+
+// Auto transition every 7 seconds (slower)
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 7000); // 7 seconds per slide
+</script>
+
 
 </body>
 </html>

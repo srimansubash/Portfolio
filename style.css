@@ -48,7 +48,7 @@ body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180de
 }
 
 .socials a[href*="github"]:hover i {
-  color: #333; /* GitHub dark grey */
+  color: #797676; /* GitHub dark grey */
 }
 
 .hero-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}

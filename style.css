@@ -1,9 +1,11 @@
 :root{
-  --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c5cff;
-  --radius:14px; --maxw:1100px; color-scheme: dark;
+  --bg:#ffffff;              /* light background */
+  --card:#f5f5f5;            /* light card background */
+  --text:#0f1724; --muted:#555; --accent:#7c5cff;
+  --radius:14px; --maxw:1100px; color-scheme: light;
 }
 *{box-sizing:border-box}
-body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180deg,var(--bg),#071023);color:#e6eef8;line-height:1.5}
+body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180deg,var(--bg),#071023);color:#071023;line-height:1.5}
 .container{max-width:var(--maxw);margin:0 auto;padding:2rem}
 .site-header{position:sticky;top:0;background:rgba(6,10,15,0.45);backdrop-filter:blur(6px);z-index:60}
 .header-inner{display:flex;align-items:center;justify-content:space-between}

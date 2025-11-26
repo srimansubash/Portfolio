@@ -11,7 +11,7 @@ Welcome to my portfolio! You can explore all my projects and work here:
 ![Cloud Kitchen](projects/cloud-kitchen/screenshot.png)
 **Description:**  
 A web-based system to manage a cloud kitchen. Features include menu management, sales report, and payment integration.  
-**Live Demo:** [Click Here](https://srimansubash.github.io/Portfolio/projects/cloud-kitchen/)  
+**Live Demo:** [Click Here](https://srimansubash.github.io/Cloudkitchen/ )  
 **Code Repository:** [GitHub Repo](https://github.com/srimansubash/Cloud-Kitchen)
 
 ---
@@ -20,7 +20,7 @@ A web-based system to manage a cloud kitchen. Features include menu management, 
 ![Cab Management](projects/cab/cab.png)
 **Description:**  
 A simple cab management system built with PHP. This demo version works without a database to showcase the frontend.  
-**Live Demo:** [Click Here](https://srimansubash.github.io/Portfolio/projects/cab/)  
+**Live Demo:** [Click Here](https://srimansubash.github.io/CabManagementSystem/)  
 **Code Repository:** [GitHub Repo](https://github.com/srimansubash/Cab-Management-System)
 
 ---

@@ -25,6 +25,14 @@ A simple cab management system built with PHP. This demo version works without a
 
 ---
 
+### 3. Blog Creation
+![Blog](projects/Blog/Blog.png)
+**Description:**  
+A full-featured PHP blog system with MySQL database that supports Markdown-style formatting (bold, italic, headers), complete CRUD operations (Create, Read, Update, Delete), and user-friendly success/error notifications. <br>
+**Live Demo:** [Click Here](https://srimansubash.github.io/BlogCreation/)  
+**Code Repository:** [GitHub Repo](https://github.com/srimansubash/BlogCreation)
+
+---
 
 ## 📂 How to Explore My Work [🔝](#my-readme)
 1. Visit the portfolio link above.  
